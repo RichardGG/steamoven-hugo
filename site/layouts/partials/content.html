@@ -1,0 +1,48 @@
+
+
+{{ $.Scratch.Set "categoryCount" 0 }}
+{{ $.Scratch.Set "projectCount" 0 }}
+{{ range where $.Site.Pages ".Title" "Categories"  }}
+{{ range $catindex, $cat_val :=  .Params.projectCategories  }}
+    {{ range where $.Site.Pages ".Title" .category }}
+        {{ $.Scratch.Add "categoryCount" 1 }}
+        {{ range .Params.projects  }}
+            {{ range where $.Site.Pages ".Title" .project }}
+                <div class="content" id="content-{{ $.Scratch.Get "projectCount" }}">
+                    <h2 class="project-title">{{ .Title }}</h2>
+                    <div class="content-detail">
+                        <div class="gallery">
+                            {{ range .Params.imageLayout }}
+                                <div class="row-holder {{ if .height }}ratio-height{{ end }}" style="{{ if .height }}padding-bottom: {{.height}}%;{{ end }}">
+                                    <div class="row">
+                                    {{ range .column }}
+                                        <div class="column" style="{{ if .width }}width: {{.width}}%;{{ end }}">
+                                            {{ range .row }}
+                                                <a class="image {{ if .fullSize }}full-size{{ end }}" href="{{ .image }}" style="{{ if .height }}height: {{.height}}%;{{ end }}">
+                                                    <img src="{{ .image }}">
+                                                </a>
+                                            {{ end }}
+                                        </div>
+                                    {{ end }}
+                                    </div>
+                                </div>
+                            {{ end }}
+                        </div>
+                        <div class="content-text">
+                            {{ .Params.description | markdownify  }}
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+            {{ $.Scratch.Add "projectCount" 1 }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ end }}
+
+<div class="content" id="content-{{ $.Scratch.Get "projectCount" }}">
+    <h2 class="project-title">Contact</h2>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeLdTBV-ljaDpf1jkzuE8NQ5Azh4YYhPVnTOWV6ejV9TWmHbw/viewform?embedded=true" width="760" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+</div>

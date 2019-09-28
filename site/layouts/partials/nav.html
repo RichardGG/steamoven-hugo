@@ -1,19 +1,22 @@
-<nav class="overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center bg-white divider-grey relative">
+<span>Quick Jump</span>
+<ul class="list-reset projects-shortcuts">
 
-	<!-- Logo -->
-	<a href="/" class="pa3 db mr4 h-100 w3 flex-none">
-		<img src="/img/logo.svg" alt="Kaldi logo" class="br0 db mb0 w-100"/>
-	</a>
-
-	<!-- Primary Nav -->
-	<ul class="flex b grey-3">
-		<li><a href="/products" class="pa3 no-underline db">Products</a></li>
-
-		<li><a href="/values" class="pa3 no-underline db">Values</a></li>
-
-		<li><a href="/post" class="pa3 no-underline db">Blog</a></li>
-
-		<li><a href="/contact" class="pa3 no-underline db">Contact</a></li>
-	</ul>
-
-</nav>
+    {{ $.Scratch.Set "categoryCount" 0 }}
+    {{ $.Scratch.Set "projectCount" 0 }}
+    {{ range where $.Site.Pages ".Title" "Categories" }}
+        {{ range $catindex, $cat_val :=  .Params.projectCategories  }}
+            {{ range where $.Site.Pages ".Title" .category }}
+                <li>
+                    <a class="slide-shortcut project-{{ $.Scratch.Get "categoryCount" }}" data-link-to="{{ $.Scratch.Get "projectCount" }}">{{.Title}}</a>
+                </li>
+                {{ $.Scratch.Add "categoryCount" 1 }}
+                {{ range .Params.projects  }}
+                    {{ $.Scratch.Add "projectCount" 1 }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    <li>
+        <a class="slide-shortcut" data-link-to="{{ $.Scratch.Get "projectCount" }}">Contact</a>
+    </li>
+</ul>

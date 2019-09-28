@@ -1,0 +1,22 @@
+{{ $.Scratch.Set "categoryCount" 0 }}
+{{ range where $.Site.Pages ".Title" "Categories" }}
+    {{ range $catindex, $cat_val :=  .Params.projectCategories  }}
+        {{ range where $.Site.Pages ".Title" .category }}
+            {{ range .Params.projects  }}
+                {{ range where $.Site.Pages ".Title" .project }}
+                    <div class="slide project-slide" data-category="{{ $.Scratch.Get "categoryCount" }}">
+                        <div class="image" style="background-image:url({{ .Params.image }})"></div>
+                    </div>
+                {{ end }}
+            {{ end }}
+            {{ $.Scratch.Add "categoryCount" 1 }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+
+{{ range where $.Site.Pages ".Title" "Contact" }}
+    <div class="slide contact-slide">
+        <div class="image" style="background-image:url({{ .Params.image }})"></div>
+    </div>
+{{ end }}
