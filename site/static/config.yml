@@ -16,21 +16,21 @@ collections: [ # A list of collections the CMS should be able to edit
         fields: [
           {label: Title, name: title, widget: string},
           {label: Image, name: image, widget: image},
-          {label: Description, name: description, widget: markdown, required: false},
+          {label: Description, name: description, widget: markdown, required: false, optional: true},
           {
             label: Image Layout (Rows),
             name: imageLayout,
             widget: list,
             fields: [
-              {label: Height, name: height, widget: number, required: false},
+              {label: Height, name: height, widget: number, required: false, optional: true},
               {label: Column, name: column, widget: list,
                 fields: [
-                  {label: Width, name: width, widget: number, required: false},
+                  {label: Width, name: width, widget: number, required: false, optional: true},
                   {label: Row, name: row, widget: list,
                     fields: [
-                      {label: Height, name: height, widget: number, required: false},
+                      {label: Height, name: height, widget: number, required: false, optional: true},
                       {label: Image, name: image, widget: image},
-                      {label: Full Size, name: fullSize, widget: boolean, required: false}
+                      {label: Full Size, name: fullSize, widget: boolean, required: false, optional: true}
                     ]
                   }
                 ]
