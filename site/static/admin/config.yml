@@ -14,22 +14,24 @@ collections: [ # A list of collections the CMS should be able to edit
         label: "About",
         name: "about",
         fields: [
-          {label: Title, name: title, widget: string},
-          {label: Image, name: image, widget: image},
+          {label: Title, name: title, widget: string, required: false, optional: true},
+          {label: Image, name: image, widget: image, required: false, optional: true},
           {label: Description, name: description, widget: markdown, required: false, optional: true},
           {
             label: Image Layout (Rows),
             name: imageLayout,
             widget: list,
+            required: false, 
+            optional: true,
             fields: [
               {label: Height, name: height, widget: number, required: false, optional: true},
-              {label: Column, name: column, widget: list,
+              {label: Column, name: column, widget: list, required: false, optional: true, 
                 fields: [
                   {label: Width, name: width, widget: number, required: false, optional: true},
-                  {label: Row, name: row, widget: list,
+                  {label: Row, name: row, widget: list, required: false, optional: true, 
                     fields: [
                       {label: Height, name: height, widget: number, required: false, optional: true},
-                      {label: Image, name: image, widget: image},
+                      {label: Image, name: image, widget: image, required: false, optional: true},
                       {label: Full Size, name: fullSize, widget: boolean, required: false, optional: true}
                     ]
                   }
@@ -48,6 +50,8 @@ collections: [ # A list of collections the CMS should be able to edit
             label: Categories, 
             name: projectCategories, 
             widget: list, 
+            required: false, 
+            optional: true,
             fields: [
               {
                 label: Category, 
@@ -55,7 +59,9 @@ collections: [ # A list of collections the CMS should be able to edit
                 widget: relation,
                 collection: categories,
                 searchFields: [title],
-                valueField: title
+                valueField: title,
+                required: false, 
+                optional: true
               }
             ]
           }
@@ -66,9 +72,9 @@ collections: [ # A list of collections the CMS should be able to edit
         label: "Contact",
         name: "contact",
         fields: [
-          {label: Title, name: title, widget: string},
-          {label: Image, name: image, widget: image},
-          {label: Description, name: description, widget: markdown}
+          {label: Title, name: title, widget: string, required: false, optional: true},
+          {label: Image, name: image, widget: image, required: false, optional: true},
+          {label: Description, name: description, widget: markdown, required: false, optional: true}
         ]
       }
     ]
@@ -79,11 +85,13 @@ collections: [ # A list of collections the CMS should be able to edit
     folder: "site/content/categories", # The path to the folder where the documents are stored
     create: true, # Allow users to create new documents in this collection
     fields: [
-      {label: Title, name: title, widget: string},
+      {label: Title, name: title, widget: string, required: false, optional: true},
       {
         label: Projects, 
         name: projects, 
         widget: list, 
+        required: false, 
+        optional: true,
         fields: [
           {
             label: Project, 
@@ -91,7 +99,9 @@ collections: [ # A list of collections the CMS should be able to edit
             widget: relation,
             collection: projects,
             searchFields: [title],
-            valueField: title
+            valueField: title,
+            required: false, 
+            optional: true
           }
         ]
       }
@@ -103,23 +113,25 @@ collections: [ # A list of collections the CMS should be able to edit
     folder: "site/content/projects", # The path to the folder where the documents are stored
     create: true, # Allow users to create new documents in this collection
     fields: [
-      {label: Title, name: title, widget: string},
-      {label: Image, name: image, widget: image},
-      {label: Description, name: description, widget: markdown},
+      {label: Title, name: title, widget: string, required: false, optional: true},
+      {label: Image, name: image, widget: image, required: false, optional: true},
+      {label: Description, name: description, widget: markdown, required: false, optional: true},
       {
         label: Image Layout (Rows),
         name: imageLayout,
         widget: list,
+        required: false, 
+        optional: true,
         fields: [
-          {label: Height, name: height, widget: number},
-          {label: Column, name: column, widget: list,
+          {label: Height, name: height, widget: number, required: false, optional: true},
+          {label: Column, name: column, widget: list, required: false, optional: true, 
             fields: [
-              {label: Width, name: width, widget: number},
-              {label: Row, name: row, widget: list,
+              {label: Width, name: width, widget: number, required: false, optional: true},
+              {label: Row, name: row, widget: list, required: false, optional: true, 
                 fields: [
-                  {label: Height, name: height, widget: number},
-                  {label: Image, name: image, widget: image},
-                  {label: Full Size, name: fullSize, widget: boolean}
+                  {label: Height, name: height, widget: number, required: false, optional: true},
+                  {label: Image, name: image, widget: image, required: false, optional: true},
+                  {label: Full Size, name: fullSize, widget: boolean, required: false, optional: true}
                 ]
               }
             ]
