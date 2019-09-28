@@ -1,0 +1,131 @@
+backend:
+  name: git-gateway
+
+media_folder: "site/static/img" # Folder where user uploaded files should go
+public_folder: "img"
+
+collections: [ # A list of collections the CMS should be able to edit
+  {
+    name: "special",
+    label: "Special",
+    files: [
+      {
+        file: "site/content/special/about.md",
+        label: "About",
+        name: "about",
+        fields: [
+          {label: Title, name: title, widget: string},
+          {label: Image, name: image, widget: image},
+          {label: Description, name: description, widget: markdown},
+          {
+            label: Image Layout (Rows),
+            name: imageLayout,
+            widget: list,
+            fields: [
+              {label: Height, name: height, widget: number},
+              {label: Column, name: column, widget: list,
+                fields: [
+                  {label: Width, name: width, widget: number},
+                  {label: Row, name: row, widget: list,
+                    fields: [
+                      {label: Height, name: height, widget: number},
+                      {label: Image, name: image, widget: image},
+                      {label: Full Size, name: fullSize, widget: boolean}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        file: "site/content/special/projectCategories.md",
+        label: "Project Categories",
+        name: "projectCategories",
+        fields: [
+          {
+            label: Categories, 
+            name: projectCategories, 
+            widget: list, 
+            fields: [
+              {
+                label: Category, 
+                name: category, 
+                widget: relation,
+                collection: categories,
+                searchFields: [title],
+                valueField: title
+              }
+            ]
+          }
+        ]
+      },
+      {
+        file: "site/content/special/contact.md",
+        label: "Contact",
+        name: "contact",
+        fields: [
+          {label: Title, name: title, widget: string},
+          {label: Image, name: image, widget: image},
+          {label: Description, name: description, widget: markdown}
+        ]
+      }
+    ]
+  },
+  { 
+    name: "categories",
+    label: "Categories",
+    folder: "site/content/categories", # The path to the folder where the documents are stored
+    create: true, # Allow users to create new documents in this collection
+    fields: [
+      {label: Title, name: title, widget: string},
+      {
+        label: Projects, 
+        name: projects, 
+        widget: list, 
+        fields: [
+          {
+            label: Project, 
+            name: project, 
+            widget: relation,
+            collection: projects,
+            searchFields: [title],
+            valueField: title
+          }
+        ]
+      }
+    ]
+  },
+  { 
+    name: "projects",
+    label: "Projects",
+    folder: "site/content/projects", # The path to the folder where the documents are stored
+    create: true, # Allow users to create new documents in this collection
+    fields: [
+      {label: Title, name: title, widget: string},
+      {label: Image, name: image, widget: image},
+      {label: Description, name: description, widget: markdown},
+      {
+        label: Image Layout (Rows),
+        name: imageLayout,
+        widget: list,
+        fields: [
+          {label: Height, name: height, widget: number},
+          {label: Column, name: column, widget: list,
+            fields: [
+              {label: Width, name: width, widget: number},
+              {label: Row, name: row, widget: list,
+                fields: [
+                  {label: Height, name: height, widget: number},
+                  {label: Image, name: image, widget: image},
+                  {label: Full Size, name: fullSize, widget: boolean}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
