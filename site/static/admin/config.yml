@@ -82,7 +82,7 @@ collections: [ # A list of collections the CMS should be able to edit
   { 
     name: "categories",
     label: "Categories",
-    folder: "site/content/categories", # The path to the folder where the documents are stored
+    folder: "site/content/cats", # The path to the folder where the documents are stored
     create: true, # Allow users to create new documents in this collection
     fields: [
       {label: Title, name: title, widget: string, required: false, optional: true},
