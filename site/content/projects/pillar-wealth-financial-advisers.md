@@ -7,8 +7,11 @@ imageLayout:
       - row:
           - fullSize: true
             image: /img/Original Brief Sheet C01.jpeg
+          - fullSize: true
+            image: /img/DIAlogues poster.jpg
   - column:
       - row:
-          - image: /img/Original Brief Sheet C012.png
+          - fullSize: true
+            image: /img/Original Brief Sheet C012.png
 ---
 
