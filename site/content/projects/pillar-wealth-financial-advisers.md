@@ -7,6 +7,8 @@ imageLayout:
       - row:
           - fullSize: true
             image: /img/Original Brief Sheet C01.jpeg
+  - column:
+      - row:
           - image: /img/Original Brief Sheet C012.png
 ---
 
