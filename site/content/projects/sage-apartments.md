@@ -19,16 +19,9 @@ imageLayout:
   - column:
       - row:
           - fullSize: true
-            image: /img/SAGE WORK.jpg
-  - column:
-      - row:
-          - fullSize: true
-            image: /img/SAGE WORK2.jpg
+            image: /img/sage-works.jpg
+          - image: /img/sage-works2.jpg
+          - image: /img/sage-works3.jpg
+          - image: /img/sage-works4.jpg
 ---
-
-
-
-
-
-
 
