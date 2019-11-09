@@ -22,12 +22,15 @@ imageLayout:
             image: /img/sage-works.jpg
   - column:
       - row:
-          - image: /img/sage-works2.jpg
+          - fullSize: true
+            image: /img/sage-works2.jpg
   - column:
       - row:
-          - image: /img/sage-works3.jpg
+          - fullSize: true
+            image: /img/sage-works3.jpg
   - column:
       - row:
-          - image: /img/sage-works4.jpg
+          - fullSize: true
+            image: /img/sage-works4.jpg
 ---
 
