@@ -1,10 +1,7 @@
 ---
 title: Pillar Wealth Financial Advisers
 image: /img/PW ICON.png
-description: |-
-  Pillar Wealth Financial Advisers
-
-  Details coming soon!
+description: Find client brief and description details within the second image on the left.
 imageLayout:
   - column:
       - row:
