@@ -19,7 +19,7 @@ imageLayout:
   - column:
       - row:
           - fullSize: true
-            image: /img/SAGE WORK.jpg
+            image: /img/sage12.png
   - column:
       - row:
           - fullSize: true
