@@ -42,7 +42,7 @@ imageLayout:
   - column:
       - row:
           - fullSize: true
-            image: /img/ssc-imagery-c01.png
+            image: /img/ssc-imagery-c01-1-.png
   - column:
       - row:
           - fullSize: true
