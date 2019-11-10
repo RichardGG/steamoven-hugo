@@ -15,5 +15,9 @@ imageLayout:
       - row:
           - fullSize: true
             image: /img/original-brief-sheet-c014.png
+  - column:
+      - row:
+          - fullSize: true
+            image: /img/original-brief-sheet-w-comps.png
 ---
 
