@@ -17,12 +17,15 @@ description: >-
   seen in the last image).
 
 
-  After my contract with Gold Coast City Marina has concluded, I took on a
-  position as the Griffith University Student Guild graphic designer to help
-  with their internal clubs’ design, as well as helping with some of their
-  events. Pictured are the two trivia night event posters I created during my
-  time with the student guild, which were distributed around campus and on their
-  social media pages.
+  -----
+
+
+  After my contract with Gold Coast City Marina had concluded, I took on a
+  position as the Griffith University Student Guild Graphic Designer to help
+  with their internal clubs’ design, as well as helping with GUGC marketing
+  collateral. Pictured are the two trivia night event posters I created during
+  my time with GUGC, which were distributed around campus and shared via social
+  media.
 
 
   During this time, I was also involved with the Design Institute of Australia
