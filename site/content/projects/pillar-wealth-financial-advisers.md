@@ -6,15 +6,11 @@ imageLayout:
   - column:
       - row:
           - fullSize: true
-            image: /img/Original Brief Sheet C01.jpeg
-  - column:
-      - row:
-          - fullSize: true
             image: /img/Original Brief Sheet C012.png
   - column:
       - row:
           - fullSize: true
-            image: /img/original-brief-sheet-c013.png
+            image: /img/original-brief-sheet-c012.png
   - column:
       - row:
           - fullSize: true
