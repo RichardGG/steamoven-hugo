@@ -37,11 +37,9 @@ imageLayout:
       - row:
           - fullSize: true
             image: /img/DIAlogues poster.jpg
+  - column:
+      - row:
+          - fullSize: true
+            image: /img/ssc-imagery-c01.png
 ---
-
-
-
-
-
-
 
