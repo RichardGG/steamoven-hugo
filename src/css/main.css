@@ -315,7 +315,7 @@ header{
 		z-index: 1;
 	}
 	&.scrolled {
-		background: white;
+		background: #363636;
 		.social {
 			right: 0%;
 			margin-right: 20px;
@@ -847,7 +847,7 @@ header{
 			-webkit-font-smoothing: unset;
 			//padding: 30px;
 			margin-top: 0;
-			font-size: 14px;
+			font-size: 12px;
 			line-height: 25px;
 			letter-spacing: 0.6px;
 
