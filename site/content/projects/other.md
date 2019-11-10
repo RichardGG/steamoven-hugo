@@ -2,6 +2,21 @@
 title: Other Print
 image: /img/OTHER ICON.png
 description: >-
+  I was asked to help out with a billboard campaign St. Stephen's College wanted
+  to implement along Hope Island Rd on the Gold Coast.
+
+
+  Working alongside the Marketing Manager, we came up with our "main" design
+  (first image). The second part of the campaign was to create print
+  advertisements for the local newspaper.
+
+
+  Due to initial unforeseen delays, I was asked to complete the first round of
+  the project in less than three days. Collaborating heavily with the Marketing
+  Manager, we were successful! The artwork was up for over a month (which can be
+  seen in the last image).
+
+
   After my contract with Gold Coast City Marina has concluded, I took on a
   position as the Griffith University Student Guild graphic designer to help
   with their internal clubs’ design, as well as helping with some of their
