@@ -10,7 +10,7 @@ imageLayout:
   - column:
       - row:
           - fullSize: true
-            image: /img/original-brief-sheet-c012.png
+            image: /img/original-brief-sheet-c012-1-.png
   - column:
       - row:
           - fullSize: true
