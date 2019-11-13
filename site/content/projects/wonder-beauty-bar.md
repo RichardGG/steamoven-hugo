@@ -56,5 +56,9 @@ imageLayout:
       - row:
           - fullSize: true
             image: /img/wbb-works2.png
+  - column:
+      - row:
+          - fullSize: true
+            image: /img/wbb-works3.png
 ---
 
