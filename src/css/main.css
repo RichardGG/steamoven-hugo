@@ -286,7 +286,6 @@ header{
 	display: flex;
 	justify-content: center;
 	position: relative;
-	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -826,6 +825,8 @@ header{
 
 			background-image: url(/img/randorepeat2.png);
 			background-size: contain;
+
+			display: none;
 			
 			width: 100%;
 			@media (min-width: 768px){
